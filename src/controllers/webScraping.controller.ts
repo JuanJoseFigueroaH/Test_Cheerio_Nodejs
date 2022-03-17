@@ -4,7 +4,7 @@ import axios from 'axios';
 class WebScrapingController {
 	public webScrapingRamaJudicial = async (req: Request, res: Response) => {
 	  // Obtener el parametro fecha
-	    const { fecha } = req.params;
+	    const { fecha } = req.query;
 
 	  // Realizar llamado para obtener los DOMS de la pagina
 	  	await axios.get('https://www.ramajudicial.gov.co/web/tribunal-superior-de-bogota-sala-laboral/140')

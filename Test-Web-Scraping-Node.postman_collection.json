@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "c11064f5-50ab-4ee3-b6ff-dd7e76d1b371",
+		"name": "Test-Web-Scraping-Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestEndpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/v1/web-scraping/webScrapingRamaJudicial?fecha=31/01/2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"web-scraping",
+						"webScrapingRamaJudicial"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "31/01/2022"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -11,14 +11,14 @@ const webScrapingRoute = Router();
 // Ruta para consumir el controlador y exponer endpoint
 /**
  * @swagger
- * /web-scraping/webScrapingRamaJudicial/{fecha}:
+ * /web-scraping/webScrapingRamaJudicial:
  *  get:
  *     description: Get Web Scraping By Date
  *     tags:
  *       - Web Scraping
  *     parameters:
  *       - name: fecha
- *         in: path
+ *         in: query
  *         required: true
  *         type: string
  *     responses:
@@ -43,7 +43,7 @@ const webScrapingRoute = Router();
  *         }
  */
 webScrapingRoute.get(
-  '/webScrapingRamaJudicial/:fecha',
+  '/webScrapingRamaJudicial/',
   webScrapingValidator.paramFechaValidator,
   validateRequest,
   webScrapingValidator.validateDate,
