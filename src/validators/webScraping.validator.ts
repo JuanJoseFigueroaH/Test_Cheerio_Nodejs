@@ -5,10 +5,12 @@ import BaseValidator from './_base.validator';
 import moment from 'moment';
 
 class ArtistsValidator extends BaseValidator {
+  // Validación del parametro fecha
   public paramFechaValidator = [param('fecha')
     .notEmpty()
     .isString().withMessage('Fecha debe ser un string.')];
 
+  // Validación del formato del parametro fecha
   public validateDate = async (
     req: Request,
     res: Response,

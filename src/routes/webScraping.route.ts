@@ -3,10 +3,12 @@ import WebScrapingController from '../controllers/webScraping.controller';
 import WebScrapingValidator from '../validators/webScraping.validator';
 import { validateRequest } from '../middlewares';
 
+// Instancia de controlador y validaciones
 const webScrapingController = new WebScrapingController();
 const webScrapingValidator = new WebScrapingValidator();
 const webScrapingRoute = Router();
 
+// Ruta para consumir el controlador y exponer endpoint
 /**
  * @swagger
  * /web-scraping/webScrapingRamaJudicial/{fecha}:
