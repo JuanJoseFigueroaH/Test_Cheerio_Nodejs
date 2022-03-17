@@ -1,7 +1,7 @@
 import { httpServer } from './app'
 
 const start = async () => {
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 3001;
   process.env.NODE_ENV = 'dev'
   if (!PORT) {
     throw new Error('Port must be defined')
