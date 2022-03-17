@@ -1,7 +1,10 @@
 import { Router } from 'express';
 import WebScrapingController from '../controllers/webScraping.controller';
+import WebScrapingValidator from '../validators/webScraping.validator';
+import { validateRequest } from '../middlewares';
 
 const webScrapingController = new WebScrapingController();
+const webScrapingValidator = new WebScrapingValidator();
 const webScrapingRoute = Router();
 
 /**
@@ -34,11 +37,14 @@ const webScrapingRoute = Router();
  *             type: object
  *       examples:
  *         application/json: {
- *            message: "Formato de fecha invalido." 
+ *            message: "Formato de fecha invalido."
  *         }
  */
 webScrapingRoute.get(
   '/webScrapingRamaJudicial/:fecha',
+  webScrapingValidator.paramFechaValidator,
+  validateRequest,
+  webScrapingValidator.validateDate,
   webScrapingController.webScrapingRamaJudicial
 );
 
