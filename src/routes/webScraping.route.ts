@@ -6,11 +6,16 @@ const webScrapingRoute = Router();
 
 /**
  * @swagger
- * /web-scraping/webScrapingRamaJudicial:
+ * /web-scraping/webScrapingRamaJudicial/{fecha}:
  *  get:
  *     description: Get Web Scraping By Date
  *     tags:
  *       - Web Scraping
+ *     parameters:
+ *       - name: fecha
+ *         in: path
+ *         required: true
+ *         type: string
  *     responses:
  *      200:
  *        examples:
@@ -29,7 +34,7 @@ const webScrapingRoute = Router();
  *          }
  */
 webScrapingRoute.get(
-  '/webScrapingRamaJudicial',
+  '/webScrapingRamaJudicial/:fecha',
   webScrapingController.webScrapingRamaJudicial
 );
 

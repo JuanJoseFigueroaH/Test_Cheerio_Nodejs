@@ -4,8 +4,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
 import { createServer } from 'http';
-import { NotFoundError } from './errors';
-import { errorHandler } from './middlewares';
+/* import { NotFoundError } from './errors';
+import { errorHandler } from './middlewares'; */
 import mainRoute from './routes/_main.route';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
@@ -68,10 +68,10 @@ app.use(
 
 app.use('/api/v1', mainRoute);
 
-app.all('*', (req: Request, res: Response) => {
+/* app.all('*', (req: Request, res: Response) => {
   throw new NotFoundError();
-});
-app.use(errorHandler);
+}); */
+// app.use(errorHandler);
 
 const httpServer = createServer(app);
 
