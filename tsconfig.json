@@ -27,7 +27,4 @@
     "skipLibCheck": true,                    
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": [
-    "prisma/*"
-  ]
 }

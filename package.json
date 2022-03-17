@@ -1,7 +1,7 @@
 {
-  "name": "1234ticket-api-v2",
+  "name": "Test-Node-Cheerio",
   "version": "1.0.0",
-  "description": "express + prisma rest API",
+  "description": "Test-Node-Cheerio-Express",
   "main": "index.js",
   "scripts": {
     "build": "tsc",

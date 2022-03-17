@@ -1,16 +1,12 @@
-import express, { Response, Request } from 'express';
+import express from 'express';
 import 'express-async-errors';
 import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
 import { createServer } from 'http';
-/* import { NotFoundError } from './errors';
-import { errorHandler } from './middlewares'; */
 import mainRoute from './routes/_main.route';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-/* import { init } from './config/socket.config'
-import { initEvent } from './config/events.config' */
 const swaggerDocs = swaggerJsDoc({
   swaggerDefinition: {
     info: {
@@ -67,11 +63,6 @@ app.use(
 );
 
 app.use('/api/v1', mainRoute);
-
-/* app.all('*', (req: Request, res: Response) => {
-  throw new NotFoundError();
-}); */
-// app.use(errorHandler);
 
 const httpServer = createServer(app);
 

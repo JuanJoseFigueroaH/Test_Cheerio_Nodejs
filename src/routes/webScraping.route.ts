@@ -20,6 +20,11 @@ const webScrapingRoute = Router();
  *      200:
  *        examples:
  *          application/json: {
+ *             "found": true,
+ *             "data": {
+ *               code: "001",
+ *               fecha: "11/01/2022"
+ *             },
  *          }
  *      400:
  *       schema:
@@ -29,9 +34,8 @@ const webScrapingRoute = Router();
  *             type: object
  *       examples:
  *         application/json: {
- *           "errors": [
- *            ],
- *          }
+ *            message: "Formato de fecha invalido." 
+ *         }
  */
 webScrapingRoute.get(
   '/webScrapingRamaJudicial/:fecha',
